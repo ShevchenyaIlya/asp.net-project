@@ -35,3 +35,4 @@
 /home/shevchenya/RiderProjects/WebApplication/asp.net-project/WebApplication1/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.pdb
 /home/shevchenya/RiderProjects/WebApplication/asp.net-project/WebApplication1/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.genruntimeconfig.cache
 /home/shevchenya/RiderProjects/WebApplication/asp.net-project/WebApplication1/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.CopyComplete
+/home/shevchenya/RiderProjects/WebApplication/asp.net-project/WebApplication1/WebApplication1/obj/Debug/netcoreapp3.1/Razor/Pages/Product.cshtml.g.cs

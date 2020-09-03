@@ -25,6 +25,20 @@
     <list default="true" id="4db1a2ab-0740-47c4-89b6-23563513a8a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +58,13 @@
         <option value="$PROJECT_DIR$/WebApplication1/models/Client.cs" />
         <option value="$PROJECT_DIR$/WebApplication1/models/User.cs" />
         <option value="$PROJECT_DIR$/WebApplication1/models/Item.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/controller.cs" />
         <option value="$PROJECT_DIR$/WebApplication1/models/Category.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/models/Product.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Pages/Product.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/ProductController.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599161368847</updated>
-      <workItem from="1599161374822" duration="2440000" />
+      <workItem from="1599161374822" duration="5350000" />
     </task>
     <servers />
   </component>
@@ -128,22 +148,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="890" height="278" key="GridCell.Tab.0.bottom" timestamp="1599161893071">
+    <state width="890" height="278" key="GridCell.Tab.0.bottom" timestamp="1599167275053">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1599161893071" />
-    <state width="890" height="278" key="GridCell.Tab.0.center" timestamp="1599161893069">
+    <state width="890" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275053" />
+    <state width="890" height="278" key="GridCell.Tab.0.center" timestamp="1599167275052">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1599161893069" />
-    <state width="890" height="278" key="GridCell.Tab.0.left" timestamp="1599161893068">
+    <state width="890" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275052" />
+    <state width="890" height="278" key="GridCell.Tab.0.left" timestamp="1599167275052">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1599161893068" />
-    <state width="890" height="278" key="GridCell.Tab.0.right" timestamp="1599161893070">
+    <state width="890" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275052" />
+    <state width="890" height="278" key="GridCell.Tab.0.right" timestamp="1599167275053">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1599161893070" />
+    <state width="890" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275053" />
     <state x="579" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size" timestamp="1599161368279">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>

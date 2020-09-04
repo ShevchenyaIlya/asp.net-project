@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
     <link rel="stylesheet" href="~/css/MainLayout.css"/>
@@ -82,8 +83,7 @@
             </ul>
         </div>
     </nav>
-<div style="width: 100%; height: 15px; background-color: #FFFFFF"></div>
-
+    <div style="width: 100%; height: 15px; background-color: #FFFFFF"></div>
     <!--<div class="row">
         <div class="col-md-12">
             
@@ -97,18 +97,49 @@
             </div>
         </div>
     </div>-->
-
-    
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
+      <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; @DateTime.Now.Year - All Rights Reserved. Created by Ilya Shevchenya.</p>
+              </div>
+    
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+    <!--<footer>
+        <div class="row">
+            <div class="col-md-12 copyright">
+                <div class="col-md-6 col-sm-6 copyright-left">
+                    <p>&copy;@DateTime.Now.Year - OnlineShopingStore. All right reserved.</p>
+                </div>
+                
+                <div class="col-md-6 col-sm-6 copyright-right">
+                    <ul class="list-unstyled list-social">
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a> </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>-->
 </div>
 
-<footer class="border-top footer text-muted black-ground">
-    <div class="container">
-        &copy; 2020 - WebApplication1 - <a asp-area="" asp-page="/Privacy">Privacy</a>
-    </div>
-</footer>
+
+
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

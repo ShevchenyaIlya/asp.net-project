@@ -8,6 +8,17 @@
         <e p="Controllers" t="Include">
           <e p="ProductController.cs" t="Include" />
         </e>
+        <e p="Images" t="Include">
+          <e p="support_towers.png" t="Include" />
+          <e p="upgrade.png" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="Client.cs" t="Include" />
+          <e p="Manager.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
         <e p="Pages" t="Include">
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />
@@ -23,7 +34,6 @@
           </e>
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
-          <e p="_ViewStart.cshtml~" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -34,13 +44,6 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="models" t="Include">
-          <e p="Category.cs" t="Include" />
-          <e p="Client.cs" t="Include" />
-          <e p="Manager.cs" t="Include" />
-          <e p="Product.cs" t="Include" />
-          <e p="User.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -51,9 +54,11 @@
         </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
+            <e p="MainLayout.css" t="Include" />
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="first_slide.png" t="Include" />
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>
@@ -110,6 +115,11 @@
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
             </e>
           </e>
+          <e p="search-icon.png" t="Include" />
+          <e p="search.png" t="Include" />
+          <e p="search1.jpeg" t="Include" />
+          <e p="second_slide.png" t="Include" />
+          <e p="thirt_slide.png" t="Include" />
         </e>
       </e>
       <e p="WebApplication1.sln" t="IncludeFlat" />

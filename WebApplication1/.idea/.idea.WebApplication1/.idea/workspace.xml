@@ -25,18 +25,23 @@
     <list default="true" id="4db1a2ab-0740-47c4-89b6-23563513a8a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/WebApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/WebApplication1.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/models/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Models/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Models/Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/Razor/Pages/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_Layout.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp3.1/WebApplication1.pdb" afterDir="false" />
     </list>
@@ -44,6 +49,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -65,6 +77,11 @@
         <option value="$PROJECT_DIR$/WebApplication1/Pages/Product.cshtml" />
         <option value="$PROJECT_DIR$/WebApplication1/Startup.cs" />
         <option value="$PROJECT_DIR$/WebApplication1/Controllers/ProductController.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/WebApplication1/Pages/Home.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/wwwroot/css/MainLayout.css" />
+        <option value="$PROJECT_DIR$/WebApplication1/Pages/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/Pages/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -77,6 +94,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -125,13 +143,14 @@
       <option name="presentableId" value="Default" />
       <updated>1599161368847</updated>
       <workItem from="1599161374822" duration="5350000" />
+      <workItem from="1599198114884" duration="12377000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -143,30 +162,43 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="890" height="278" key="GridCell.Tab.0.bottom" timestamp="1599167275053">
+    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599203058855">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275053" />
-    <state width="890" height="278" key="GridCell.Tab.0.center" timestamp="1599167275052">
+    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/49.27.1871.1053@49.27.1871.1053" timestamp="1599203058855" />
+    <state width="890" height="210" key="GridCell.Tab.0.bottom" timestamp="1599211795156">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275052" />
-    <state width="890" height="278" key="GridCell.Tab.0.left" timestamp="1599167275052">
+    <state width="890" height="210" key="GridCell.Tab.0.bottom/49.27.1871.1053@49.27.1871.1053" timestamp="1599211795156" />
+    <state width="890" height="210" key="GridCell.Tab.0.center" timestamp="1599211795156">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275052" />
-    <state width="890" height="278" key="GridCell.Tab.0.right" timestamp="1599167275053">
+    <state width="890" height="210" key="GridCell.Tab.0.center/49.27.1871.1053@49.27.1871.1053" timestamp="1599211795156" />
+    <state width="890" height="210" key="GridCell.Tab.0.left" timestamp="1599211795156">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
-    <state width="890" height="278" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1599167275053" />
+    <state width="890" height="210" key="GridCell.Tab.0.left/49.27.1871.1053@49.27.1871.1053" timestamp="1599211795156" />
+    <state width="890" height="210" key="GridCell.Tab.0.right" timestamp="1599211795156">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state width="890" height="210" key="GridCell.Tab.0.right/49.27.1871.1053@49.27.1871.1053" timestamp="1599211795156" />
     <state x="579" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size" timestamp="1599161368279">
       <screen x="49" y="27" width="1871" height="1053" />
     </state>
     <state x="579" y="287" width="800" height="530" key="Rider.ProjectTemplateDialog.Size/49.27.1871.1053@49.27.1871.1053" timestamp="1599161368279" />
+    <state x="1087" y="162" width="729" height="783" key="find.popup" timestamp="1599199618952">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state x="1087" y="162" width="729" height="783" key="find.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1599199618952" />
+    <state x="1115" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1599204923676">
+      <screen x="49" y="27" width="1871" height="1053" />
+    </state>
+    <state x="1115" y="259" width="672" height="678" key="search.everywhere.popup/49.27.1871.1053@49.27.1871.1053" timestamp="1599204923676" />
   </component>
 </project>

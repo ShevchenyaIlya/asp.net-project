@@ -4,4 +4,14 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Images" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\first_slide.png" />
+      <None Include="wwwroot\second_slide.png" />
+      <None Include="wwwroot\thirt_slide.png" />
+    </ItemGroup>
+
 </Project>

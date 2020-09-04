@@ -17,6 +17,7 @@
           <e p="Client.cs" t="Include" />
           <e p="Manager.cs" t="Include" />
           <e p="Product.cs" t="Include" />
+          <e p="ShoppingDetail.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="Pages" t="Include">

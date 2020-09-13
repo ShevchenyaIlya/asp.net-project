@@ -228,6 +228,7 @@
     <Content Include="Content\Login-Form-Dark.css" />
     <Content Include="Content\MainLayout.css" />
     <Content Include="Content\Navigation-with-Button.css" />
+    <Content Include="Content\Pretty-Search-Form.css" />
     <Content Include="Content\Profile-Edit-Form-1.css" />
     <Content Include="Content\Profile-Edit-Form.css" />
     <Content Include="Content\Registration-Form-with-Photo.css" />
@@ -439,6 +440,7 @@
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Delete.cshtml" />
     <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Home\CategoryItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

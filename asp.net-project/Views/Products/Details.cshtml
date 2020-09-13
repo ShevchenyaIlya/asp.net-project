@@ -21,7 +21,7 @@
                 <br>
                 <br>
                 Category name:
-                @Html.DisplayFor(model => model.Category.CategoryName)
+                @ViewBag.categoryName
 
                 <br>
                 <br>
@@ -75,5 +75,6 @@
 <p>
     <a href="~/Products/Edit/@Model.ProductId" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Edit</a>
     <a href="~/Home/Products" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Back to List</a>
+    <a href="~/Home/Categories/@Model.CategoryId" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">View category</a>
 </p>
 <div style="background-color:white; height: 10px"></div>

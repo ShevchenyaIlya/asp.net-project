@@ -24,16 +24,20 @@ namespace asp.net_project.Controllers
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                Product product = db.Products.Find(id);
-                if (product == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(product);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Product product = db.Products.Find(id);
+            Category category = db.Categories.Find(product.CategoryId);
+            ViewBag.categoryName = category.CategoryName;
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(product);
         }
 
         // GET: Products/Create
@@ -102,6 +106,9 @@ namespace asp.net_project.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
+            Category category = db.Categories.Find(product.CategoryId);
+            ViewBag.categoryName = category.CategoryName;
+
             if (product == null)
             {
                 return HttpNotFound();

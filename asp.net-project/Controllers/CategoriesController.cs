@@ -29,6 +29,8 @@ namespace asp.net_project.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Category category = db.Categories.Find(id);
+            ViewBag.categoryId = id;
+
             if (category == null)
             {
                 return HttpNotFound();

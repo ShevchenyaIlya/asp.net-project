@@ -1,0 +1,26 @@
+﻿@model IEnumerable<asp.net_project.Models.Category>
+
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card-columns">
+    @foreach (var category in Model)
+    {
+    <div class="card">
+        <div class="card-img" style="background-image: url('../../Images/@category.ImageUrl');">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@category.CategoryName</h5>
+            <h6 class="card-text">@category.Description</h6>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+                <a href="~/Categories/Details/@category.CategoryId" class="btn btn-secondary" role="button" aria-pressed="true">More Info</a>
+            </small>
+        </div>
+    </div>
+    }
+</div>

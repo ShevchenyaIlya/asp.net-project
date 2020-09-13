@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/MainLayout.css" />
+    <link rel="stylesheet" href="~/Content/Footer-Clean.css" />
+    <link rel="stylesheet" href="~/Content/Footer-Dark.css" />
+    <link rel="stylesheet" href="~/Content/Navigation-with-Button.css" />
+    <link rel="stylesheet" href="~/Content/smoothproducts.css" />
+    <link rel="stylesheet" href="~/Content/Article-Clean.css" />
+    <link rel="stylesheet" href="~/Fonts/ionicons.min.css">
+    <link rel="stylesheet" href="~/Fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/Content/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="~/Content/Data-Table.css" />
+    <link rel="stylesheet" href="~/Content/Cards.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="~/Fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/canito-detalle-producto.css">
+    <link rel="stylesheet" href="~/Content/Article-List.css">
+    <link rel="stylesheet" href="~/Content/Login-Form-Dark.css">
+    <link rel="stylesheet" href="~/Content/styles.css">
+    <link rel="stylesheet" href="~/Content/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="~/Content/Profile-Edit-Form.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="logo">
+                    <h1><a href="~/Home">Online <span>Shopping Store</span></a> </h1>
+                    <p>My Personal Shop</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="account">
+                    <ul>
+                        <li>
+                            <div class="hidden-xs">
+                                <h4><a>Contact Information</a></h4>
+                                <p>+375 ##-######</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100%; height: 3px; background-color: #1d2124"></div>
+
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <div class="container">
+                <a class="navbar-brand" href="~/Home">Product Store</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                     id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="~/Home/Products">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="~/Home/About">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="~/Home/Category">Categories</a></li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <div style="width: 100%; height: 15px; background-color: #FFFFFF"></div>
+
+
+    <div class="container body-content">
+        <hr />
+        @RenderBody()
+
+    </div>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="~/Home/Contact">Company</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Online Shopping Store</h3>
+                        <p>This site created by Ilya Shevchenya. ASP.NET Core project.</p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/shevchenya.i"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/go3kqbMs46igayb"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Shevchenya Development © 2020</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/bs-init.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="~/Scripts/smoothproducts.min.js"></script>
+    <script src="~/Scripts/theme.js"></script>
+    <script src="~/Scripts/Profile-Edit-Form.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

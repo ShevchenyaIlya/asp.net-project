@@ -1,0 +1,79 @@
+﻿@model asp.net_project.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <h1>Product details</h1>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-12"><img class="img-thumbnail img-fluid center-block" src="~/Images/@Model.ImageUrl"></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h1>Product</h1>
+            <hr />
+            <p>
+                <br>
+                <br>
+                Category name:
+                @Html.DisplayFor(model => model.Category.CategoryName)
+
+                <br>
+                <br>
+                Product name:
+                @Html.DisplayFor(model => model.ProductName)
+
+                <br>
+                <br />
+                Description:
+                @Html.DisplayFor(model => model.Description)
+
+                <br>
+                <br />
+                Is active:
+                @Html.DisplayFor(model => model.IsActive)
+
+                <br>
+                <br />
+                Is delete:
+                @Html.DisplayFor(model => model.IsDelete)
+
+                <br>
+                <br />
+                Price
+                @Html.DisplayFor(model => model.Price)
+
+                <br>
+                <br />
+                Creation date:
+                @Html.DisplayFor(model => model.CreatedDate)
+
+                <br />
+                <br>
+                Image:
+                @Html.DisplayFor(model => model.ImageUrl)
+
+                <br>
+                <br />
+                In stock:
+                @Html.DisplayFor(model => model.InStock)
+
+                <br>
+                <br />
+                Quantity:
+                @Html.DisplayFor(model => model.Quantity)
+            </p>
+        </div>
+    </div>
+</div>
+<div style="background-color:white; height: 10px"></div>
+<p>
+    <a href="~/Products/Edit/@Model.ProductId" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Edit</a>
+    <a href="~/Home/Products" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Back to List</a>
+</p>
+<div style="background-color:white; height: 10px"></div>

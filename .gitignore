@@ -1,2 +1,5 @@
 /.idea/.idea.WebApplication/.idea/
 /.idea/
+/packages
+/asp.net-project/bin
+/asp.net-project/obj/Debug

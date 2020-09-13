@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 
@@ -44,5 +45,21 @@ namespace asp.net_project.Controllers
             return View(categories);
         }
 
+        public ActionResult CategoryItems(int? id)
+        {
+            var products = db.Products.ToList<Product>();
+            List<Product> categoryProducts = new List<Product>();
+            foreach (var product in products)
+            {
+                if(product.CategoryId == id)
+                {
+                    categoryProducts.Add(product);
+                }
+            }
+
+            ViewBag.categoryProducts = categoryProducts;
+
+            return View(products);
+        }
     }
 }

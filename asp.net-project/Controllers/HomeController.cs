@@ -61,5 +61,18 @@ namespace asp.net_project.Controllers
 
             return View(products);
         }
+
+        public ActionResult FindProduct(string searching)
+        {
+            var products = from product in db.Products
+                          select product;
+
+            if (!String.IsNullOrEmpty(searching))
+            {
+                products = products.Where(product => product.ProductName.Contains(searching));
+            }
+
+            return View(products.ToList());
+        }
     }
 }

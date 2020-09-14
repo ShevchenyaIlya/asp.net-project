@@ -441,6 +441,7 @@
     <Content Include="Views\Categories\Delete.cshtml" />
     <Content Include="Views\Categories\Create.cshtml" />
     <Content Include="Views\Home\CategoryItems.cshtml" />
+    <Content Include="Views\Home\FindProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

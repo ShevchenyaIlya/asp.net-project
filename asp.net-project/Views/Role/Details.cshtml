@@ -1,0 +1,35 @@
+﻿@model asp.net_project.Models.RoleViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="container">
+
+    <h1>Product details</h1>
+    <div class="row">
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>
+
+<div style="background-color:white; height: 10px"></div>
+<p>
+    <a href="~/Role/Edit/@Model.Id" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Edit</a>
+    <a href="~/Role/Index" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Back to List</a>
+</p>
+<div style="background-color:white; height: 10px"></div>

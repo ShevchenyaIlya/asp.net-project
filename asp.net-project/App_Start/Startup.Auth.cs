@@ -58,11 +58,11 @@ namespace asp.net_project
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "907370484479-i4fvsojk5nlnfd16gsitvf9gavkqttlk.apps.googleusercontent.com",
-            //    ClientSecret = "nleuDD84VkVT0KmkH-iZLUbh"
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "475361658538-2q3u43opi3o1j257h14augfq0u0uo018.apps.googleusercontent.com",
+                ClientSecret = "nz6bK5Y7OCIjllPIKRAKExNW"
+            });
         }
     }
 }

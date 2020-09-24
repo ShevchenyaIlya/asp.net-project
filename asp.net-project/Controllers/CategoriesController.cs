@@ -11,17 +11,16 @@ namespace asp.net_project.Controllers
 {
     public class CategoriesController : Controller
     {
-        // GET: Categories
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(bool? success)
         {
             var categories = db.Categories.ToList<Category>();
+            if (success != null)
+                ViewBag.Success = success;
             return View(categories);
         }
 
-        // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,32 +36,42 @@ namespace asp.net_project.Controllers
             }
             return View(category);
         }
-        // GET: Products/Create
+
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName");
             return View();
         }
 
-        // POST: Products/Create
+        // POST: Categories/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category)
+        public ActionResult Create([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category, HttpPostedFileBase categoryImage)
         {
             if (ModelState.IsValid)
             {
+                if (categoryImage != null)
+                {
+                    string extension = categoryImage.FileName.Split('.').Last();
+
+                    if (extension == "png" || extension == "jpg" || extension == "bmp" || extension == "jpeg")
+                    {
+                        category.Image = new byte[categoryImage.ContentLength];
+                        categoryImage.InputStream.Read(category.Image, 0, categoryImage.ContentLength);
+                        category.ImageUrl = categoryImage.FileName;
+                    }
+                }
                 db.Categories.Add(category);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { success = true });
             }
 
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName", category.CategoryId);
             return View(category);
         }
 
-        // GET: Products/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,15 +87,26 @@ namespace asp.net_project.Controllers
             return View(category);
         }
 
-        // POST: Products/Edit/5
+        // POST: Categories/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category)
+        public ActionResult Edit([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category, HttpPostedFileBase categoryImage)
         {
             if (ModelState.IsValid)
             {
+                if (categoryImage != null)
+                {
+                    string extension = categoryImage.FileName.Split('.').Last();
+
+                    if (extension == "png" || extension == "jpg" || extension == "bmp" || extension == "jpeg")
+                    {
+                        category.Image = new byte[categoryImage.ContentLength];
+                        categoryImage.InputStream.Read(category.Image, 0, categoryImage.ContentLength);
+                        category.ImageUrl = categoryImage.FileName;
+                    }
+                }
                 db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using asp.net_project.Models;
+using System.Data.Entity;
+using System.Web.UI;
 
 namespace asp.net_project.Controllers
 {
@@ -68,7 +70,10 @@ namespace asp.net_project.Controllers
             ViewBag.LastName = user.Lastname;
             ViewBag.Email = user.Email;
             ViewBag.City = user.City;
-            ViewBag.UserImage = user.Image;
+            ViewBag.UserImage = user.ImageSource;
+            ViewBag.UserImageName = user.Image;
+            ViewBag.UserName = user.UserName;
+
             var userId = User.Identity.GetUserId();
             var model = new IndexViewModel
             {
@@ -80,6 +85,44 @@ namespace asp.net_project.Controllers
             };
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public ActionResult Index([Bind(Include = "FirstName,LastName,City,Username,Email")] ApplicationUser appUser,HttpPostedFileBase userImage)
+        {
+            var users = db.Users.ToList();
+            var user = users[0];
+            foreach (var person in users)
+            {
+                if (person.Id == User.Identity.GetUserId())
+                {
+                    user = person;
+                }
+            }
+
+            if (userImage != null)
+            {
+                string extension = userImage.FileName.Split('.').Last();
+
+                if (extension == "png" || extension == "jpg" || extension == "bmp" || extension == "jpeg")
+                {
+                    user.ImageSource = new byte[userImage.ContentLength];
+                    userImage.InputStream.Read(user.ImageSource, 0, userImage.ContentLength);
+                    user.Image = userImage.FileName;
+                }
+            }
+            //TODO: Add correct input check
+            user.UserName = appUser.UserName;
+            user.Firstname = appUser.Firstname;
+            user.Lastname = appUser.Lastname;
+            user.Email = appUser.Email;
+
+            db.Entry(user).State = EntityState.Modified;
+            db.SaveChanges();
+            return Redirect("~/Home");
+        }
+
 
         //
         // POST: /Manage/RemoveLogin
@@ -225,6 +268,7 @@ namespace asp.net_project.Controllers
         {
             return View();
         }
+
 
         //
         // POST: /Manage/ChangePassword

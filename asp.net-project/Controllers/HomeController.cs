@@ -22,6 +22,14 @@ namespace asp.net_project.Controllers
             return View(products);
         }
 
+        [Authorize(Roles = "Admin")]
+        public ActionResult Image()
+        {
+            ViewBag.image = db.Products.ToList()[0].Image;
+            return View(db.Products.ToList());
+        }
+
+        [CustomAuthorize(Roles = "Saler")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

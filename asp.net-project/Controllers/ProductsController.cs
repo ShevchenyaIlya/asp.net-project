@@ -15,9 +15,11 @@ namespace asp.net_project.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(bool? success)
         {
             var products = db.Products.Include(p => p.Category);
+            if (success != null)
+                ViewBag.Success = success;
             return View(products.ToList());
         }
 
@@ -52,13 +54,26 @@ namespace asp.net_project.Controllers
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,ImageUrl,InStock,CategoryId,Quantity")] Product product)
+        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,InStock,CategoryId,Quantity,Image")] Product product, HttpPostedFileBase productImage)
         {
+            product.ImageUrl = productImage.FileName;
+           // ModelState.SetModelValue("ImageUrl", productImage.FileName);
             if (ModelState.IsValid)
             {
+                if (productImage != null)
+                {
+                    string extension = productImage.FileName.Split('.').Last();
+
+                    if (extension == "png" || extension == "jpg" || extension == "bmp" || extension == "jpeg")
+                    {
+                        product.Image = new byte[productImage.ContentLength];
+                        productImage.InputStream.Read(product.Image, 0, productImage.ContentLength);
+                        product.ImageUrl = productImage.FileName;
+                    }
+                }
                 db.Products.Add(product);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { success = true });
             }
 
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName", product.CategoryId);
@@ -86,10 +101,21 @@ namespace asp.net_project.Controllers
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,ImageUrl,InStock,CategoryId,Quantity")] Product product)
-        {
+        public ActionResult Edit([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,ImageUrl,InStock,CategoryId,Quantity,Image")] Product product, HttpPostedFileBase productImage)
+        {   
             if (ModelState.IsValid)
             {
+                if (productImage != null)
+                {
+                    string extension = productImage.FileName.Split('.').Last();
+
+                    if (extension == "png" || extension == "jpg" || extension == "bmp" || extension == "jpeg")
+                    {
+                        product.Image = new byte[productImage.ContentLength];
+                        productImage.InputStream.Read(product.Image, 0, productImage.ContentLength);
+                        product.ImageUrl = productImage.FileName;
+                    }
+                }
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

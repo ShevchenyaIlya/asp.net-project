@@ -46,25 +46,24 @@
             <button class="btn btn-primary btn-block" type="submit">Log In</button>
         </div>
         <p>
-            @Html.ActionLink("Регистрация нового пользователя", "Register")
+            @Html.ActionLink("Register as a new user", "Register")
         </p>
-        @* Включите, когда будет включено подтверждение учетной записи для функции сброса пароля
-            <p>
-                @Html.ActionLink("Забыли пароль?", "ForgotPassword")
-            </p>*@
+        <p>
+            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+        </p>
 
         @*<section id="socialLoginForm">
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl})
         </section>*@
     }
 </div>
-@*</div>
+</div>
     <div class="col-md-4">
         <section id="socialLoginForm">
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
         </section>
     </div>
-</div>*@
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -15,6 +15,7 @@ namespace asp.net_project.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var products = db.Products.ToList<Product>();
@@ -22,37 +23,41 @@ namespace asp.net_project.Controllers
             return View(products);
         }
 
-        [Authorize(Roles = "Admin")]
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Image()
         {
             ViewBag.image = db.Products.ToList()[0].Image;
             return View(db.Products.ToList());
         }
 
-        [CustomAuthorize(Roles = "Saler")]
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Products()
         {
             var products = db.Products.ToList<Product>();
             return View(products);
         }
+        [AllowAnonymous]
         public ActionResult Category()
         {
             var categories = db.Categories.ToList<Category>();
             return View(categories);
         }
 
+        [AllowAnonymous]
         public ActionResult CategoryItems(int? id)
         {
             var products = db.Products.ToList<Product>();
@@ -70,6 +75,7 @@ namespace asp.net_project.Controllers
             return View(products);
         }
 
+        [AllowAnonymous]
         public ActionResult FindProduct(string searching)
         {
             var products = from product in db.Products

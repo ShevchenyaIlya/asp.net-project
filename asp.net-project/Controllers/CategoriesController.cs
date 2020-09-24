@@ -13,6 +13,7 @@ namespace asp.net_project.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Index(bool? success)
         {
             var categories = db.Categories.ToList<Category>();
@@ -21,6 +22,7 @@ namespace asp.net_project.Controllers
             return View(categories);
         }
 
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace asp.net_project.Controllers
             return View(category);
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName");
@@ -46,6 +49,7 @@ namespace asp.net_project.Controllers
         // POST: Categories/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category, HttpPostedFileBase categoryImage)
@@ -72,6 +76,7 @@ namespace asp.net_project.Controllers
             return View(category);
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +95,7 @@ namespace asp.net_project.Controllers
         // POST: Categories/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "CategoryId,CategoryName,Description,IsActive,IsDelete,ImageUrl")] Category category, HttpPostedFileBase categoryImage)
@@ -115,6 +121,7 @@ namespace asp.net_project.Controllers
             return View(category);
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         // GET: Products/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -131,6 +138,7 @@ namespace asp.net_project.Controllers
         }
 
         // POST: Products/Delete/5
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

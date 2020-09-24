@@ -38,6 +38,7 @@ namespace asp.net_project.Controllers
             }
         }
         // GET: Role
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Index()
         {
             List<RoleViewModel> list = new List<RoleViewModel>();
@@ -48,11 +49,13 @@ namespace asp.net_project.Controllers
             return View(list);
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Create(RoleViewModel model )
         {
@@ -61,12 +64,14 @@ namespace asp.net_project.Controllers
             return RedirectToAction("Index");
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
             return View(new RoleViewModel(role));
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Edit(RoleViewModel model)
         {
@@ -75,18 +80,21 @@ namespace asp.net_project.Controllers
             return RedirectToAction("Index");
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> Details(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
             return View(new RoleViewModel(role));
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
             return View(new RoleViewModel(role));
         }
 
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteConfirmed(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);

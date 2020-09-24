@@ -15,6 +15,7 @@ namespace asp.net_project.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Index(bool? success)
         {
             var products = db.Products.Include(p => p.Category);
@@ -24,6 +25,7 @@ namespace asp.net_project.Controllers
         }
 
         // GET: Products/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,6 +45,7 @@ namespace asp.net_project.Controllers
         }
 
         // GET: Products/Create
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "CategoryName");
@@ -52,6 +55,7 @@ namespace asp.net_project.Controllers
         // POST: Products/Create
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,InStock,CategoryId,Quantity,Image")] Product product, HttpPostedFileBase productImage)
@@ -81,6 +85,7 @@ namespace asp.net_project.Controllers
         }
 
         // GET: Products/Edit/5
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -99,6 +104,7 @@ namespace asp.net_project.Controllers
         // POST: Products/Edit/5
         // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
         // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductId,ProductName,Description,IsActive,IsDelete,Price,CreatedDate,ImageUrl,InStock,CategoryId,Quantity,Image")] Product product, HttpPostedFileBase productImage)
@@ -125,6 +131,7 @@ namespace asp.net_project.Controllers
         }
 
         // GET: Products/Delete/5
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -143,6 +150,7 @@ namespace asp.net_project.Controllers
         }
 
         // POST: Products/Delete/5
+        [CustomAuthorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -8,7 +8,7 @@
 
 <div class="register-photo">
     <div class="form-container">
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Edit", "Categories", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             @Html.AntiForgeryToken()
 
@@ -19,12 +19,19 @@
                 @Html.HiddenFor(model => model.CategoryId)
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control", @type = "file" } })
+                    <p class="control-label">Image name</p>
+                    @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
                 </div>
 
                 <div class="form-group">
+                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label" })
+                    <input type="file" id="categoryImage" name="categoryImage" />
+                    @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <p class="control-label">Category name</p>
                     @Html.LabelFor(model => model.CategoryName, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
@@ -37,7 +44,7 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label" })
+                    <p class="control-label">Is active</p>
                     <div class="checkbox">
                         @Html.EditorFor(model => model.IsActive)
                         @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
@@ -45,7 +52,7 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.IsDelete, htmlAttributes: new { @class = "control-label" })
+                    <p class="control-label">Is deleted</p>
                     <div class="checkbox">
                         @Html.EditorFor(model => model.IsDelete)
                         @Html.ValidationMessageFor(model => model.IsDelete, "", new { @class = "text-danger" })

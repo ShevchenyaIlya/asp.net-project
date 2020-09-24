@@ -33,19 +33,23 @@
     {
         foreach (var product in ViewBag.categoryProducts)
         {
-            <div class="card">
-                <div class="card-img" style="background-image: url('../../Images/@product.ImageUrl');">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@product.ProductName</h5>
-                    <h6 class="card-text">@product.Description</h6>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        <a href="~/Products/Details/@product.ProductId" class="btn btn-secondary" role="button" aria-pressed="true">More Info</a>
-                    </small>
-                </div>
+        <div class="card">
+            @{
+                var base64 = Convert.ToBase64String(product.Image);
+                var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+            }
+            <div class="card-img" style="background-image: url(@imgsrc);">
             </div>
+            <div class="card-body">
+                <h5 class="card-title">@product.ProductName</h5>
+                <h6 class="card-text">@product.Description</h6>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <a href="~/Products/Details/@product.ProductId" class="btn btn-secondary" role="button" aria-pressed="true">More Info</a>
+                </small>
+            </div>
+        </div>
         }
     }
 </div>

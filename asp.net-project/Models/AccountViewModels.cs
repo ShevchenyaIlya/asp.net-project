@@ -5,6 +5,14 @@ namespace asp.net_project.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
+        [Display(Name = "First name")]
+        public string Firstname { get; set; }
+        [Display(Name = "Last name")]
+        public string Lastname { get; set; }
+        [Display(Name = "Nickname")]
+        public string UserName { get; set; }
+        [Display(Name = "Location(City)")]
+        public string City { get; set; }
         [Required]
         [Display(Name = "Адрес электронной почты")]
         public string Email { get; set; }
@@ -13,6 +21,7 @@ namespace asp.net_project.Models
     public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }
+
     }
 
     public class SendCodeViewModel

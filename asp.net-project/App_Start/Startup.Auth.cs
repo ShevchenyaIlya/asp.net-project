@@ -18,7 +18,7 @@ namespace asp.net_project
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
-
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
             // Включение использования файла cookie, в котором приложение может хранить информацию для пользователя, выполнившего вход,
             // и использование файла cookie для временного хранения информации о входах пользователя с помощью стороннего поставщика входа
             // Настройка файла cookie для входа
@@ -60,8 +60,8 @@ namespace asp.net_project
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientId = "907370484479-i4fvsojk5nlnfd16gsitvf9gavkqttlk.apps.googleusercontent.com",
+            //    ClientSecret = "nleuDD84VkVT0KmkH-iZLUbh"
             //});
         }
     }

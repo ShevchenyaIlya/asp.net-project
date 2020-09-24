@@ -9,8 +9,8 @@ namespace asp.net_project.Models
     public class Category
     {
         public int CategoryId { get; set; }
-        [Required]
         public string ImageUrl { get; set; }
+        public byte[] Image { get; set; }
         [Required]
         public string CategoryName { get; set; }
         [Required]

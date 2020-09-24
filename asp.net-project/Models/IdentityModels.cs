@@ -14,6 +14,8 @@ namespace asp.net_project.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string City { get; set; }
+        public byte[] ImageSource { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType
@@ -23,6 +25,12 @@ namespace asp.net_project.Models
         }
     }
 
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole():base() { }
+        public ApplicationRole(string roleName) : base(roleName) { }
+
+    }
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -38,5 +46,6 @@ namespace asp.net_project.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingDetail> ShoppingDetails { get; set; }
+
     }
 }

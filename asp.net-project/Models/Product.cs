@@ -18,8 +18,9 @@ namespace asp.net_project.Models
         [Required]
         public decimal Price { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
-        [Required]
         public string ImageUrl { get; set; }
+        public byte[] Image { get; set; }
+
         public bool InStock { get; set; }
         //TODO: Don't forget to delete this line of code. 
         public Nullable<int> CategoryId { get; set; }
